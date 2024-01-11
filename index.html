@@ -2,17 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
         <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <meta name = "description" content="">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <link rel = "stylesheet" href="">
         <title>IzShopping | Easy your life</title>
-        <link rel="stylesheet" href="styles/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+        <link rel = "stylesheet" href="styles/style.css">
+        <link rel = "preconnect" href="https://fonts.googleapis.com">
+        <link rel = "preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href = "https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
    <div class = "header">
@@ -22,7 +23,7 @@
           <img src = "images/logo.png" width = "125px">
         </div>
         <nav>
-          <ul>
+          <ul id = "menuItems">
             <li><a href = "">Home</a></li>
             <li><a href = "">Products</a></li>
             <li><a href = "">About</a></li>
@@ -31,6 +32,7 @@
           </ul>
         </nav>
         <img src = "images/cart.png" width = "30px" height = "30px">
+        <img src = "images/menu.png" class = "menu-icon" onclick = "menuToggle()">
       </div>
       <div class = "row">
         <div class = "col-2">
@@ -258,42 +260,42 @@
         <div class="small-container">
           <div class="row">
             <div class="col-3">
-              <i class = "fa fa-quote-lef"></i>
+              <i class = "fa fa-quote-left"></i>
               <p>It is a long established fact that a reader will be distracted. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors </p>
               <div class = "rating">
                 <i class = "fa fa-star"></i>
                 <i class = "fa fa-star"></i>
                 <i class = "fa fa-star"></i>
                 <i class = "fa fa-star"></i>
-                <i class = "fa fa-star-o"></i>
+                <i class = "fa fa-star"></i>
               </div>
               <img src="images/user-1.png">
               <h3>Sean Parker</h3>
             </div>
 
             <div class="col-3">
-              <i class = "fa fa-quote-lef"></i>
+              <i class = "fa fa-quote-left"></i>
               <p>It is a long established fact that a reader will be distracted. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors </p>
               <div class = "rating">
                 <i class = "fa fa-star"></i>
                 <i class = "fa fa-star"></i>
                 <i class = "fa fa-star"></i>
                 <i class = "fa fa-star"></i>
-                <i class = "fa fa-star-o"></i>
+                <i class = "fa fa-star-half-o"></i>
               </div>
               <img src="images/user-2.png">
               <h3>Sam Alex</h3>
             </div>
 
             <div class="col-3">
-              <i class = "fa fa-quote-lef"></i>
+              <i class = "fa fa-quote-left"></i>
               <p>It is a long established fact that a reader will be distracted. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors </p>
               <div class = "rating">
                 <i class = "fa fa-star"></i>
                 <i class = "fa fa-star"></i>
                 <i class = "fa fa-star"></i>
                 <i class = "fa fa-star"></i>
-                <i class = "fa fa-star-o"></i>
+                <i class = "fa fa-star"></i>
               </div>
               <img src="images/user-3.png">
               <h3>Julio Kuri</h3>
@@ -365,5 +367,20 @@
 
           </div>
         </div>
+
+        <!--------JS For Toggole Menu---------------> 
+        <script>
+          var MenuItems = document.getElementById("menuItems");
+          MenuItems.style.maxHeight = "0px";
+
+          function menuToggle(){
+            if(MenuItems.style.maxHeight == "0px"){
+              MenuItems.style.maxHeight = "200px";
+            }else{
+              MenuItems.style.maxHeight = "0px";
+            }
+          }
+        </script>
+
   </body>
 </html>
